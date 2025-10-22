@@ -20,20 +20,20 @@ public class CustomerServiceApplication {
         return args -> {
 
    customerRepository.save(Customer.builder()
-                   .firstName("fatima").email("fatima@gmail.com")
+                   .nom("fatima").email("fatima@gmail.com")
            .build());
             customerRepository.save(Customer.builder()
-                    .firstName("mohamed").email("moh@gmail.com")
+                    .nom("mohamed").email("moh@gmail.com")
                     .build());
             customerRepository.save(Customer.builder()
-                    .firstName("hiba").email("hiba@gmail.com")
+                    .nom("hiba").email("hiba@gmail.com")
                     .build());
 
             customerRepository.findAll().forEach(c->{
 
                 System.out.println("----------------------------");
                 System.out.println(c.getId());
-                System.out.println(c.getFirstName());
+                System.out.println(c.getNom());
                 System.out.println(c.getEmail());
             });
         };
