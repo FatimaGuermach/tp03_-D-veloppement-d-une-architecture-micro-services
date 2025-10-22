@@ -21,5 +21,6 @@ public class ProductItem {
     private Bill bill;
     private int quantity;
     private double unitprice;
-    @Transient private Product product;
+    @Transient
+    private Product product;
 }
